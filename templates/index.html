@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form action="/convert" method="post" id="amount">
+        <label for="summa">Sum:</label>
+        <input type="text" id="summa" name="summa"><br><br>
+
+        <label for="from_currency">From Currency:</label>
+        <select id="from_currency" name="from_currency">
+            {% for code, name in currencies.items() %}
+                <option value="{{ code }}">{{ name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="to_currency">To Currency:</label>
+        <select id="to_currency" name="to_currency">
+            {% for code, name in currencies.items() %}
+                <option value="{{ code }}">{{ name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <br><br>
+
+
+
+        <input type="submit" value="Convert">
+    </form>
+
+</body>
+</html>
+
+
+</body>
+</html>
